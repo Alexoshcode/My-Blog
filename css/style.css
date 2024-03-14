@@ -39,7 +39,7 @@ section {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1068px;
   margin: auto;
   width: 100%;
 }
@@ -53,6 +53,15 @@ header {
   z-index: 200;
 }
 
+header.shadow {
+  background: var(--bg-color);
+  box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+  transition: 0.4s;
+}
+
+header.shadow .logo {
+  color: var(--text-color);
+}
 .nav {
   display: flex;
   align-items: center;
@@ -152,7 +161,7 @@ header {
 }
 
 .category {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--second-color);
@@ -187,6 +196,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .profile-img {
@@ -196,5 +206,249 @@ header {
   object-position: center;
   border-radius: 50%;
   border: 2px solid var(--second-color);
-  margin-top: 10px;
+}
+
+.profile-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+}
+
+.social .bx {
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.social .bx:hover {
+  color: var(--second-color);
+  transition: 0.3s all linear;
+}
+
+/* post content */
+.post-header {
+  width: 100%;
+  height: 500px;
+  background: var(--container-color);
+}
+
+.post-container {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem !important;
+}
+
+.back-home {
+  color: var(--second-color);
+  font-size: 1.2rem;
+}
+
+.header-title {
+  width: 90%;
+  font-size: 2.5rem;
+  color: var(--bg-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post-content {
+  margin-top: 10rem !important;
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+}
+
+.post-text {
+  font-size: 1rem;
+  line-height: 1.7rem;
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.share-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: var(--second-color);
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+
+/* responsive */
+@media (max-width: 1060px) {
+  .container {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .home-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav {
+    padding: 14px 0;
+  }
+  .post-container {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px 0;
+  }
+  section {
+    padding: 2rem 0;
+  }
+  .header-content {
+    margin-top: 3rem !important;
+  }
+  .home {
+    min-height: 380px;
+  }
+  .home-title {
+    font-size: 2.5rem;
+  }
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-img {
+    height: 370px;
+  }
+  .post-header {
+    height: 435px;
+  }
+  .post-content {
+    margin-top: 9rem !important;
+  }
+  .filter-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .nav {
+    padding: 8px 0;
+  }
+  .login {
+    padding: 6px 10px;
+  }
+  .post-header {
+    height: 390px;
+  }
+  .post-filter {
+    flex-flow: wrap;
+    line-height: 1.8rem;
+  }
+  .header-title {
+    width: 100%;
+  }
+  .home-title {
+    font-size: 2rem;
+  }
+  .home-subtitle {
+    font-size: 1rem;
+  }
+  .header-img {
+    height: 340px;
+  }
+  .footer {
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 396px) {
+  .logo span {
+    font-size: 1.5rem;
+  }
+  .login {
+    padding: 3px 6px;
+  }
+  .home-title {
+    font-size: 1.5rem;
+  }
+  .home-subtitle {
+    font-size: 0.9rem;
+  }
+  .home {
+    min-height: 300px;
+  }
+  .post-box {
+    padding: 10px;
+  }
+  .back-home {
+    font-size: 1rem;
+  }
+  .header-title {
+    font-size: 1.4rem;
+  }
+  .header-img {
+    height: 240px;
+  }
+  .post-header {
+    height: 335px;
+  }
+  .post-content {
+    margin-top: 5rem !important;
+  }
+  .sub-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .post-text {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    margin: 10px 0;
+  }
+  .share-title {
+    font-size: 1rem;
+    padding: 3px 6px;
+  }
+  .social .bx {
+    font-size: 1rem;
+  }
+  .footer p {
+    font-size: 0.7rem;
+  }
 }
